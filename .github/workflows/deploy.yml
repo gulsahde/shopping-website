@@ -12,7 +12,7 @@ on:
 jobs:
   vercel:
     runs-on: ubuntu-latest
-    name: "Deploy applicaion"
+    name: Deploy applicaion
 
     strategy:
       matrix:
@@ -31,7 +31,7 @@ jobs:
     - run: npm run build --if-present
     
 
-    - name: "Deploy application"
+    - name: Deploy application
       run: |
          prodRun=""
          if [[ ${GITHUB_REF} == "refs/heads/main" ]]; then
